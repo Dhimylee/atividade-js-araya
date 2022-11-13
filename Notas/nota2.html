@@ -10,37 +10,47 @@
 </head>
 
 <body>
-    <div class="container2">
-        <h1>Média de Notas</h1>
+    <div class="container-body">
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="../index.html"">IMC</a></li>
+                <li><a href=" ../Listas/index2.html">Listas</a></li>
+                <li><a href="nota1.html">Notas - 1</a></li>
+                <li><a href="#" class="active">Notas - 2</a></li>
+            </ul>
+        </nav>
+        <div class="container2">
+            <h1>Média de Notas</h1>
 
-        <p>Média:
-            <span id="media"></span>
-        </p>
-        <p>Situação:
-            <span id="situacao"></span>
-        </p>
+            <p>Média:
+                <span id="media"></span>
+            </p>
+            <p>Situação:
+                <span id="situacao"></span>
+            </p>
 
-        <script>
-            let n1 = parseFloat(prompt("Nota1:"));
-            let n2 = parseFloat(prompt("Nota2:"));
+            <script>
+                let n1 = parseFloat(prompt("Nota1:"));
+                let n2 = parseFloat(prompt("Nota2:"));
 
-            let media = (n1 + n2) / 2;
+                let media = (n1 + n2) / 2;
 
-            let situacao = "";
-            let cor = "";
+                let situacao = "";
+                let cor = "";
 
-            if (media >= 6.0) {
-                situacao = "Aprovado";
-                cor = "#00a8cc";
-            } else {
-                situacao = "Reprovado";
-                cor = "#e02d2d";
-            }
+                if (media >= 6.0) {
+                    situacao = "Aprovado";
+                    cor = "#00a8cc";
+                } else {
+                    situacao = "Reprovado";
+                    cor = "#e02d2d";
+                }
 
-            document.getElementById("media").innerHTML = media;
-            document.getElementById("situacao").innerHTML = situacao;
-            document.getElementById("situacao").style.color = cor;
-        </script>
+                document.getElementById("media").innerHTML = media;
+                document.getElementById("situacao").innerHTML = situacao;
+                document.getElementById("situacao").style.color = cor;
+            </script>
+        </div>
     </div>
 </body>
 

@@ -12,6 +12,41 @@ body {
     color: white;
 }
 
+.menu {
+    margin-bottom: 10%;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    float: left;
+    border-right: 1px solid #FFF;
+}
+
+.menu li:last-child {
+    border-right: none;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover:not(.active) {
+    background-color: #8640e1;
+}
+
+.menu .active {
+    background-color: #8640e1;
+}
 .container {
     width: 500px;
     display: flex;

@@ -8,10 +8,49 @@
 body {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
     background-color: #1f032e;
     color: white;
+}
+.container-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  margin-bottom: 10%;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.menu li {
+  float: left;
+  border-right:1px solid #FFF;
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover:not(.active) {
+  background-color: #af86e5;
+}
+
+.menu .active {
+  background-color: #af86e5;
 }
 
 main {

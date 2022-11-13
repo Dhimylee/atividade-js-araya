@@ -10,48 +10,58 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Notas</h1>
+    <div class="container-body">
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="../index.html"">IMC</a></li>
+                <li><a href=" ../Listas/index2.html">Listas</a></li>
+                <li><a href="#" class="active">Notas - 1</a></li>
+                <li><a href="nota2.html">Notas - 2</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>Notas</h1>
 
-        <label for="idNota1">Nota 1:</label>
-        <input type="text" name="" id="idNota1">
-        <br>
+            <label for="idNota1">Nota 1:</label>
+            <input type="text" name="" id="idNota1">
+            <br>
 
-        <label for="idNota2">Nota 2:</label>
-        <input type="text" name="" id="idNota2">
-        <br>
+            <label for="idNota2">Nota 2:</label>
+            <input type="text" name="" id="idNota2">
+            <br>
 
-        <button onclick="verificaSituacao()">Verificar Situação</button>
+            <button onclick="verificaSituacao()">Verificar Situação</button>
 
-        <p>Média:
-            <span id="media"></span>
-        </p>
-        <p>Situação:
-            <span id="situacao"></span>
-        </p>
+            <p>Média:
+                <span id="media"></span>
+            </p>
+            <p>Situação:
+                <span id="situacao"></span>
+            </p>
 
-        <script>
-            function verificaSituacao() {
-                let n1 = parseFloat(document.getElementById("idNota1").value);
-                let n2 = parseFloat(document.getElementById("idNota1").value);
+            <script>
+                function verificaSituacao() {
+                    let n1 = parseFloat(document.getElementById("idNota1").value);
+                    let n2 = parseFloat(document.getElementById("idNota1").value);
 
-                let media = (n1 + n2) / 2;
+                    let media = (n1 + n2) / 2;
 
-                let situacao = "";
-                let cor = "";
+                    let situacao = "";
+                    let cor = "";
 
-                if (media >= 6.0) {
-                    situacao = "Aprovado";
-                    cor = blue;
-                } else {
-                    situacao = "Reprovado";
-                    cor = "red";
+                    if (media >= 6.0) {
+                        situacao = "Aprovado";
+                        cor = blue;
+                    } else {
+                        situacao = "Reprovado";
+                        cor = "red";
+                    }
+                    document.getElementById("media").innerHTML = media;
+                    document.getElementById("situacao").innerHTML = situacao;
+                    document.getElementById("situacao").style.color = cor;
                 }
-                document.getElementById("media").innerHTML = media;
-                document.getElementById("situacao").innerHTML = situacao;
-                document.getElementById("situacao").style.color = cor;
-            }
-        </script>
+            </script>
+        </div>
     </div>
 </body>
 
