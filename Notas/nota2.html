@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Notas</title>
+</head>
+
+<body>
+    <div class="container2">
+        <h1>Média de Notas</h1>
+
+        <p>Média:
+            <span id="media"></span>
+        </p>
+        <p>Situação:
+            <span id="situacao"></span>
+        </p>
+
+        <script>
+            let n1 = parseFloat(prompt("Nota1:"));
+            let n2 = parseFloat(prompt("Nota2:"));
+
+            let media = (n1 + n2) / 2;
+
+            let situacao = "";
+            let cor = "";
+
+            if (media >= 6.0) {
+                situacao = "Aprovado";
+                cor = "#00a8cc";
+            } else {
+                situacao = "Reprovado";
+                cor = "#e02d2d";
+            }
+
+            document.getElementById("media").innerHTML = media;
+            document.getElementById("situacao").innerHTML = situacao;
+            document.getElementById("situacao").style.color = cor;
+        </script>
+    </div>
+</body>
+
+</html>
